@@ -1,0 +1,75 @@
+[debug] [2023-03-08T15:53:21.689Z] ----------------------------------------------------------------------
+[debug] [2023-03-08T15:53:21.755Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Mohsin Bilal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2023-03-08T15:53:21.757Z] CLI Version:   11.24.1
+[debug] [2023-03-08T15:53:21.762Z] Platform:      win32
+[debug] [2023-03-08T15:53:21.762Z] Node Version:  v18.14.0
+[debug] [2023-03-08T15:53:21.995Z] Time:          Wed Mar 08 2023 20:53:21 GMT+0500 (Pakistan Standard Time)
+[debug] [2023-03-08T15:53:21.996Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-08T15:53:22.353Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-08T15:53:22.381Z] > authorizing via signed-in user (webxlent@gmail.com)
+[debug] [2023-03-08T15:53:22.384Z] [iam] checking project dating-app-mern-webghost for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-08T15:53:22.455Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dating-app-mern-webghost:testIamPermissions [none]
+[debug] [2023-03-08T15:53:22.457Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dating-app-mern-webghost:testIamPermissions x-goog-quota-user=projects/dating-app-mern-webghost
+[debug] [2023-03-08T15:53:22.459Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dating-app-mern-webghost:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-08T15:53:25.438Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dating-app-mern-webghost:testIamPermissions 200
+[debug] [2023-03-08T15:53:25.441Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dating-app-mern-webghost:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-08T15:53:25.450Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dating-app-mern-webghost [none]
+[debug] [2023-03-08T15:53:26.921Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dating-app-mern-webghost 200
+[debug] [2023-03-08T15:53:26.923Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dating-app-mern-webghost {"projectId":"dating-app-mern-webghost","projectNumber":"394303601738","displayName":"dating-app-mern-webghost","name":"projects/dating-app-mern-webghost","resources":{"hostingSite":"dating-app-mern-webghost","realtimeDatabaseInstance":"dating-app-mern-webghost-default-rtdb"},"state":"ACTIVE","etag":"1_1e901080-04c0-42f1-8535-8edb4cc7936d"}
+[info] 
+[info] === Deploying to 'dating-app-mern-webghost'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-03-08T15:53:26.955Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dating-app-mern-webghost/versions [none]
+[debug] [2023-03-08T15:53:26.956Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dating-app-mern-webghost/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-03-08T15:53:28.972Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dating-app-mern-webghost/versions 200
+[debug] [2023-03-08T15:53:28.974Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dating-app-mern-webghost/versions {"name":"projects/394303601738/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[dating-app-mern-webghost]: beginning deploy... 
+[info] i  hosting[dating-app-mern-webghost]: found 5 files in public 
+[debug] [2023-03-08T15:53:29.029Z] [hosting] uploading with 200 concurrency
+[debug] [2023-03-08T15:53:29.066Z] [hosting] hash cache [cHVibGlj] stored for 5 files
+[debug] [2023-03-08T15:53:29.068Z] [hosting][hash queue][FINAL] {"max":2,"min":0,"avg":0,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":7}
+[debug] [2023-03-08T15:53:29.071Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/394303601738/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442:populateFiles [none]
+[debug] [2023-03-08T15:53:29.072Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/394303601738/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442:populateFiles {"files":{"/404.html":"daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa","/index.html":"29555a9254a61b2f8a54fe1e1ca94efcac79b99a1e81e7cc94e3aa21aa2b441b","/logo192.png":"b605ef8ae1ac20a45b7dc51d95cb1b88e3e8936b61e7e926d344af569410ad3b","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49"}}
+[debug] [2023-03-08T15:53:30.715Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/394303601738/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442:populateFiles 200
+[debug] [2023-03-08T15:53:30.717Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/394303601738/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442/files"}
+[debug] [2023-03-08T15:53:30.757Z] [hosting][populate queue][FINAL] {"max":1694,"min":1694,"avg":1694,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1694}
+[debug] [2023-03-08T15:53:30.759Z] [hosting] uploads queued: 0
+[debug] [2023-03-08T15:53:30.760Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1678290810760}
+[info] i  hosting: upload complete 
+[info] +  hosting[dating-app-mern-webghost]: file upload complete 
+[debug] [2023-03-08T15:53:30.763Z] [hosting] deploy completed after 1780ms
+[debug] [2023-03-08T15:53:30.770Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "dating-app-mern-webghost"
+    },
+    "version": "projects/394303601738/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442"
+  }
+]
+[info] i  hosting[dating-app-mern-webghost]: finalizing version... 
+[debug] [2023-03-08T15:53:30.778Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442 updateMask=status%2Cconfig
+[debug] [2023-03-08T15:53:30.779Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442 {"status":"FINALIZED","config":{}}
+[debug] [2023-03-08T15:53:32.544Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442 200
+[debug] [2023-03-08T15:53:32.546Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442 {"name":"projects/394303601738/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-03-08T15:53:28.129171Z","createUser":{"email":"webxlent@gmail.com"},"finalizeTime":"2023-03-08T15:53:32.031857Z","finalizeUser":{"email":"webxlent@gmail.com"}}
+[debug] [2023-03-08T15:53:32.548Z] [hosting] finalized version for dating-app-mern-webghost:[object Object]
+[info] +  hosting[dating-app-mern-webghost]: version finalized 
+[info] i  hosting[dating-app-mern-webghost]: releasing new version... 
+[debug] [2023-03-08T15:53:32.551Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dating-app-mern-webghost/channels/live/releases versionName=projects%2F394303601738%2Fsites%2Fdating-app-mern-webghost%2Fversions%2F7a3eae08d9c75442
+[debug] [2023-03-08T15:53:32.553Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dating-app-mern-webghost/channels/live/releases {}
+[debug] [2023-03-08T15:53:34.321Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dating-app-mern-webghost/channels/live/releases 200
+[debug] [2023-03-08T15:53:34.324Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dating-app-mern-webghost/channels/live/releases {"name":"projects/394303601738/sites/dating-app-mern-webghost/channels/live/releases/1678290813183000","version":{"name":"projects/394303601738/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-03-08T15:53:28.129171Z","createUser":{"email":"webxlent@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxYheuaeWK3irlW77wkubM0fL2gynx6rYPy4sfc=mo"},"finalizeTime":"2023-03-08T15:53:32.031857Z","finalizeUser":{"email":"webxlent@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxYheuaeWK3irlW77wkubM0fL2gynx6rYPy4sfc=mo"}},"type":"DEPLOY","releaseTime":"2023-03-08T15:53:33.183Z","releaseUser":{"email":"webxlent@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxYheuaeWK3irlW77wkubM0fL2gynx6rYPy4sfc=mo"}}
+[debug] [2023-03-08T15:53:34.329Z] [hosting] release: {"name":"projects/394303601738/sites/dating-app-mern-webghost/channels/live/releases/1678290813183000","version":{"name":"projects/394303601738/sites/dating-app-mern-webghost/versions/7a3eae08d9c75442","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-03-08T15:53:28.129171Z","createUser":{"email":"webxlent@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxYheuaeWK3irlW77wkubM0fL2gynx6rYPy4sfc=mo"},"finalizeTime":"2023-03-08T15:53:32.031857Z","finalizeUser":{"email":"webxlent@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxYheuaeWK3irlW77wkubM0fL2gynx6rYPy4sfc=mo"}},"type":"DEPLOY","releaseTime":"2023-03-08T15:53:33.183Z","releaseUser":{"email":"webxlent@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxYheuaeWK3irlW77wkubM0fL2gynx6rYPy4sfc=mo"}}
+[info] +  hosting[dating-app-mern-webghost]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/dating-app-mern-webghost/overview
+[info] Hosting URL: https://dating-app-mern-webghost.web.app
